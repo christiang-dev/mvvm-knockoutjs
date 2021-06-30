@@ -16,7 +16,7 @@ function MoviesViewModel() {
     ];    
 
     // Editable data
-    self.seats = ko.observableArray([
+    self.movies = ko.observableArray([
         new NeueFilme("Test123", self.availableMovies[0]),
         new NeueFilme("Test321", self.availableMovies[0])
     ]);

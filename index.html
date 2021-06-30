@@ -1,3 +1,5 @@
+<script type='text/javascript' src='./Scripts/knockout-3.5.1.js'></script>
+
 <h2>Neue Filme</h2>
 
 <table>
@@ -7,7 +9,7 @@
     <tbody data-bind="foreach: movies">
         <tr>
             <td data-bind="text: name"></td>
-            <td data-bind="text: movie().movieDescription"></td>
         </tr>    
     </tbody>
 </table>
+<script src="viewmodel.js"></script>
