@@ -1,0 +1,13 @@
+@{ ViewBag.Title = "Home Page"; }
+<script src="/Scripts/knockout-3.5.1.js" type="text/javascript"></script>
+
+<h3>Details</h3>
+
+<p>First Name : <span data-bind="text: firstName"</span></p>
+
+<script type="text/javascript">
+    var viewModel = {
+        firstName : "Bert"
+    };
+    ko.applyBindings(viewModel);
+</script>
