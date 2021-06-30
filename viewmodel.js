@@ -17,6 +17,8 @@ function NochmalAnsehen(name, image) {
     self.image = image;
 }
 
+
+
 // Overall viewmodel for this screen, along with initial state
 function MoviesViewModel() {
     var self = this;
@@ -44,7 +46,7 @@ function MoviesViewModel() {
     self.rewatchMovies = ko.observableArray([
         new NeueFilme("Suicide Squad", "assets/suicide_squad.webp"),
         new NeueFilme("Joker", "assets/joker.webp"),
-        new NeueFilme("Batman Begins", "assets/batman.webp")
+        new NeueFilme("Spiderman", "assets/spiderman.webp")
     ]);
 }
 
