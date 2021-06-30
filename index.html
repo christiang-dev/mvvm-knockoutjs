@@ -1,15 +1,41 @@
-<script type='text/javascript' src='./Scripts/knockout-3.5.1.js'></script>
+<!DOCTYPE html>
+<html>
 
-<h2>Neue Filme</h2>
+<head>
+    <script type='text/javascript' src='./Scripts/knockout-3.5.1.js'></script>
+    <link rel="stylesheet" href="style.css">
 
-<table>
-    <thead><tr>
-        <th>Movie name</th><th>Description</th>
-    </tr></thead>
-    <tbody data-bind="foreach: movies">
-        <tr>
-            <td data-bind="text: name"></td>
-        </tr>    
-    </tbody>
-</table>
-<script src="viewmodel.js"></script>
+    <title>Njetflix</title>
+</head>
+
+<body>
+    <h2>Neue Filme</h2>
+
+    <div class="movies" id="movies">
+        <div class="row" id="row">
+            <div class="col" id="col" data-bind="foreach: movies">
+                <p data-bind="text: name"></p>
+                <img data-bind="attr: { src: image }">
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <table>
+        <thead>
+            <tr>
+                <th>Movie name</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody data-bind="foreach: movies">
+            <tr>
+                <td data-bind="text: name"></td>
+            </tr>
+        </tbody>
+    </table> -->
+    <script src="viewmodel.js">
+    </script>
+</body>
+
+</html>

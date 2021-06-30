@@ -1,7 +1,8 @@
 // Class to represent a row in the seat reservations grid
-function NeueFilme(name) {
+function NeueFilme(name, image) {
     var self = this;
     self.name = name;
+    self.image = image;
 }
 
 // Overall viewmodel for this screen, along with initial state
@@ -17,8 +18,9 @@ function MoviesViewModel() {
 
     // Editable data
     self.movies = ko.observableArray([
-        new NeueFilme("Test123", self.availableMovies[0]),
-        new NeueFilme("Test321", self.availableMovies[0])
+        new NeueFilme("Deadpool", "assets/deadpool.webp"),
+        new NeueFilme("Lucy", "assets/lucy.webp"),
+        new NeueFilme("Batman Begins", "assets/batman.webp")
     ]);
 }
 
