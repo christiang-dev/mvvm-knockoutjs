@@ -11,14 +11,37 @@
 <body>
     <h2>Neue Filme</h2>
 
-    <div class="movies" id="movies">
+    <div class="movies" id="newMovies">
         <div class="row" id="row">
-            <div class="col" id="col" data-bind="foreach: movies">
+            <div class="col" id="col" data-bind="foreach: newMovies">
                 <p data-bind="text: name"></p>
                 <img data-bind="attr: { src: image }">
             </div>
         </div>
     </div>
+
+    <h2>Derzeit Beliebt</h2>
+
+    <div class="movies" id="popularMovies">
+        <div class="row" id="row">
+            <div class="col" id="col" data-bind="foreach: popularMovies">
+                <p data-bind="text: name"></p>
+                <img data-bind="attr: { src: image }">
+            </div>
+        </div>
+    </div>
+
+    <h2>Nochmal Ansehen</h2>
+
+    <div class="movies" id="rewatchMovies">
+        <div class="row" id="row">
+            <div class="col" id="col" data-bind="foreach: rewatchMovies">
+                <p data-bind="text: name"></p>
+                <img data-bind="attr: { src: image }">
+            </div>
+        </div>
+    </div>
+
 
 
     <!-- <table>

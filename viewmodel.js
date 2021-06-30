@@ -5,6 +5,18 @@ function NeueFilme(name, image) {
     self.image = image;
 }
 
+function DerzeitBeliebt(name, image) {
+    var self = this;
+    self.name = name;
+    self.image = image;
+}
+
+function NochmalAnsehen(name, image) {
+    var self = this;
+    self.name = name;
+    self.image = image;
+}
+
 // Overall viewmodel for this screen, along with initial state
 function MoviesViewModel() {
     var self = this;
@@ -17,9 +29,21 @@ function MoviesViewModel() {
     ];    
 
     // Editable data
-    self.movies = ko.observableArray([
+    self.newMovies = ko.observableArray([
         new NeueFilme("Deadpool", "assets/deadpool.webp"),
         new NeueFilme("Lucy", "assets/lucy.webp"),
+        new NeueFilme("Batman Begins", "assets/batman.webp")
+    ]);
+
+    self.popularMovies = ko.observableArray([
+        new NeueFilme("Iron Man", "assets/iron_man.webp"),
+        new NeueFilme("Rush Hour", "assets/rush_hour.webp"),
+        new NeueFilme("Avengers", "assets/avengers.jpg")
+    ]);
+
+    self.rewatchMovies = ko.observableArray([
+        new NeueFilme("Suicide Squad", "assets/suicide_squad.webp"),
+        new NeueFilme("Joker", "assets/joker.webp"),
         new NeueFilme("Batman Begins", "assets/batman.webp")
     ]);
 }
