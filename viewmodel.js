@@ -34,6 +34,8 @@ function Movies(name, image, director, year, actors, description) {
 // Overall viewmodel for this screen, along with initial state
 function MoviesViewModel() {
     var self = this;
+    self.chosenMovieData = ko.observable();
+	self.showMoviesOverview = ko.observable();
 
     // Non-editable catalog data - would come from the server
     self.availableMovies = [
@@ -73,7 +75,7 @@ function MoviesViewModel() {
         "Chris Tucker, Jackie Chan, Zhan Jingchu",
         "Inspektor Lee fügt dem organisierten Verbrechen in Hongkong immer wieder empfindliche Niederlagen zu. Sein väterlicher Freund, Konsul Han, hilft ihm dabei nach Kräften. Als Hans Tochter Soo Yung in Los Angeles entführt wird, bittet er Lee um Hilfe.. Dieser Text wurde von www.cinehits.de entnommen."),
         new Movies("The Interview", "assets/the_interview.webp",
-        "´Seth Rogen, Evan Goldberg",
+        "Seth Rogen, Evan Goldberg",
         "2014",
         "Seth Rogen, James Franco, Randall Park",
         "Der Film handelt von einem Mordkomplott der CIA gegen Nordkoreas Staatsoberhaupt Kim Jong-un im Rahmen eines Interviews durch einen US-amerikanischen Showmaster.")
@@ -96,6 +98,19 @@ function MoviesViewModel() {
         "Kirsten Dunst, James Franco, Willem Dafoe",
         "In der Highschool ist er schüchtern und unbeliebt. Auf einem Schulausflug wird er von einer genetisch manipulierten Spinne gebissen und entwickelt daraufhin Superkräfte: die vergrößerte Kraft, Geschwindigkeit und Wendigkeit einer Spinne, die Fähigkeit Wände zu erklettern und einen besonderen „Spinnensinn“ für Gefahren.")
     ]);
+
+    self.goToMovie = function(movie) {
+		self.showMoviesOverview(null);
+        self.chosenMovieData(movie);
+    };
+
+    self.goToMoviesOverview = function() {
+		self.chosenMovieData(null);
+		self.showMoviesOverview(new vm());
+	}
+	
+	self.chosenMovieData(null);
+	self.showMoviesOverview(this);
 }
 
 ko.applyBindings(new MoviesViewModel());

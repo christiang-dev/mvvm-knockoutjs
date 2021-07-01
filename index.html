@@ -11,10 +11,11 @@
 <body>
 <img src="./assets/logo.png" alt="Logo">
 
+<h2>Neue Filme</h2>
+
     <div class="movies" id="newMovies">
-        <h2>Neue Filme</h2>
         <div class="row" id="row" data-bind="foreach: newMovies">
-            <div class="col" id="col" >
+            <div class="col" id="col" data-bind="click: $root.goToMovie">
                 <img data-bind="attr: { src: image }">
             </div>
         </div>
@@ -24,7 +25,7 @@
 
     <div class="movies" id="popularMovies">
         <div class="row" id="row" data-bind="foreach: popularMovies">
-            <div class="col" id="col">
+            <div class="col" id="col" data-bind="click: $root.goToMovie">
                 <img data-bind="attr: { src: image }">
             </div>
         </div>
@@ -34,9 +35,27 @@
 
     <div class="movies" id="rewatchMovies">
         <div class="row" id="row" data-bind="foreach: rewatchMovies">
-            <div class="col" id="col">
+            <div class="col" id="col" data-bind="click: $root.goToMovie">
                 <img data-bind="attr: { src: image }">
             </div>
+        </div>
+    </div>
+
+    <div class="dialog" id="dialog" data-bind="with: chosenMovieData">
+        <div class="dialog-content">
+          <img data-bind="attr:{src: image}"/>
+          <div>
+            <h3 data-bind="text: name"></h3>
+            <h4>Regisseur: </h4>
+            <p data-bind="text: director"></p>
+            <h4>Erscheinungsjahr:</h4>
+            <p data-bind="text: year"></p>
+            <h4>Darsteller:</h4>
+            <p data-bind="text: actors"></p>
+            <h4>Kurzbeschreibung:</h4>
+            <p data-bind="text: description"></p>
+          </div>
+          <button data-bind="click: $root.goToMoviesOverview">Zurück</a>
         </div>
     </div>
 
