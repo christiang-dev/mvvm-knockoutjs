@@ -40,7 +40,7 @@ function MoviesViewModel() {
     self.popularMovies = ko.observableArray([
         new NeueFilme("Iron Man", "assets/iron_man.webp"),
         new NeueFilme("Rush Hour", "assets/rush_hour.webp"),
-        new NeueFilme("Avengers", "assets/avengers.jpg")
+        new NeueFilme("The Interview", "assets/the_interview.webp")
     ]);
 
     self.rewatchMovies = ko.observableArray([
