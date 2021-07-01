@@ -72,11 +72,11 @@ function MoviesViewModel() {
         "1998",
         "Chris Tucker, Jackie Chan, Zhan Jingchu",
         "Inspektor Lee fügt dem organisierten Verbrechen in Hongkong immer wieder empfindliche Niederlagen zu. Sein väterlicher Freund, Konsul Han, hilft ihm dabei nach Kräften. Als Hans Tochter Soo Yung in Los Angeles entführt wird, bittet er Lee um Hilfe.. Dieser Text wurde von www.cinehits.de entnommen."),
-        new Movies("Avengers", "assets/avengers.jpg",
-        "Joss Whedon",
-        "2012",
-        "Scarlett Johansson, Chris Evans, Robert Downey Jr.",
-        "Marvel präsentiert MARVEL'S THE AVENGERS, das ultimative Team. Die legendären Superhelden Iron Man, der unglaubliche Hulk, Thor und Captain America versammeln sich zum ersten Mal in einer neuen actiongeladenen Story mit den Schauspielern Robert Downey Jr., Scarlett Johansson und Samuel L. Jackson in den Hauptrollen und unter der Regie von Joss Whedon. Als ein unerwarteter Feind den Weltfrieden und die globale SIcherheit bedrohnt, sieht sich Nick Fury, führender Kopf der mächtigen internationalen Friedensorganisation S.H.I.E.L.D., gezwungen ein Team zusammenzustellen, das die Welt vor dem Absturz in die Katastrophe bewahrt. Mit jeder Menge exklusiven must-have Inhalten, einschließlich zusätzlicher und erweiteter Szenen und Pannen vom Dreh ist MARVEL'S THE AVENGERS voller Action, Abenteuer und spektakulären Spezialeffekten bepackt. Dieser Text wurde von www.cinehits.de entnommen.")
+        new Movies("The Interview", "assets/the_interview.webp",
+        "´Seth Rogen, Evan Goldberg",
+        "2014",
+        "Seth Rogen, James Franco, Randall Park",
+        "Der Film handelt von einem Mordkomplott der CIA gegen Nordkoreas Staatsoberhaupt Kim Jong-un im Rahmen eines Interviews durch einen US-amerikanischen Showmaster.")
     ]);
 
     self.rewatchMovies = ko.observableArray([
