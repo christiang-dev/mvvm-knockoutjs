@@ -11,26 +11,6 @@ function Movies(name, image, director, year, actors, description) {
     return self;
 }
 
-// function NeueFilme(name, image) {
-//     var self = this;
-//     self.name = name;
-//     self.image = image;
-// }
-
-// function DerzeitBeliebt(name, image) {
-//     var self = this;
-//     self.name = name;
-//     self.image = image;
-// }
-
-// function NochmalAnsehen(name, image) {
-//     var self = this;
-//     self.name = name;
-//     self.image = image;
-// }
-
-
-
 // Overall viewmodel for this screen, along with initial state
 function MoviesViewModel() {
     var self = this;
@@ -87,7 +67,7 @@ function MoviesViewModel() {
         "2016",
         "Margot Robbie, Will Smith, Jared Leto",
         "Amanda Waller stellt für die US-Regierung ein Team zusammen, das bei hochriskanten Aufträgen ohne Rücksicht auf Verluste eingesetzt werden soll und deshalb aus gefährlichen Verbrechern besteht: der gestörten Harley Quinn, dem Profikiller Deadshot, dem pyrokinetischen Ex-Gangster El Diablo, dem Dieb Captain Boomerang, ..."),
-        new Movies("Joker", "assets/joker.webp",
+        new Movies("Joker", "assets/joker.jpg",
         "Todd Phillips",
         "2019",
         "Joaquin Phoenix, Robert De Niro, Zazie Beetz",
@@ -106,7 +86,7 @@ function MoviesViewModel() {
 
     self.goToMoviesOverview = function() {
 		self.chosenMovieData(null);
-		self.showMoviesOverview(new vm());
+		self.showMoviesOverview(new MoviesViewModel());
 	}
 	
 	self.chosenMovieData(null);

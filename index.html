@@ -17,6 +17,10 @@
         <div class="row" id="row" data-bind="foreach: newMovies">
             <div class="col" id="col" data-bind="click: $root.goToMovie">
                 <img data-bind="attr: { src: image }">
+                <div class="info" id="info">
+                    <h3 data-bind="text: name"></h3>
+                    <p data-bind="text: year"></p>
+                </div>
             </div>
         </div>
     </div>
@@ -27,6 +31,10 @@
         <div class="row" id="row" data-bind="foreach: popularMovies">
             <div class="col" id="col" data-bind="click: $root.goToMovie">
                 <img data-bind="attr: { src: image }">
+                <div class="info" id="info">
+                    <h3 data-bind="text: name"></h3>
+                    <p data-bind="text: year"></p>
+                </div>
             </div>
         </div>
     </div>
@@ -37,6 +45,10 @@
         <div class="row" id="row" data-bind="foreach: rewatchMovies">
             <div class="col" id="col" data-bind="click: $root.goToMovie">
                 <img data-bind="attr: { src: image }">
+                <div class="info" id="info">
+                    <h3 data-bind="text: name"></h3>
+                    <p data-bind="text: year"></p>
+                </div>
             </div>
         </div>
     </div>
@@ -58,22 +70,6 @@
           <button data-bind="click: $root.goToMoviesOverview">Zurück</a>
         </div>
     </div>
-
-
-
-    <!-- <table>
-        <thead>
-            <tr>
-                <th>Movie name</th>
-                <th>Description</th>
-            </tr>
-        </thead>
-        <tbody data-bind="foreach: movies">
-            <tr>
-                <td data-bind="text: name"></td>
-            </tr>
-        </tbody>
-    </table> -->
     <script src="viewmodel.js">
     </script>
 </body>

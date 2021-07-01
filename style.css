@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
+body * {
+    transition: 0.3s ease all;
+}
 body {
     background-color: rgba(0, 0, 0, 0.911);
     font-family: 'Roboto', sans-serif;
@@ -26,18 +29,31 @@ h2 {
 .col img {
     border-radius: 10px;
     max-width: 100%;
+    max-height: 200px;
     height: auto;
+}
+
+.info {
+    display: none;
+    width: inherit;
 }
 
 .col img:hover {
     transform: scale(1.1);
 }
 
+.col img:hover + .info {
+    display: contents;
+	position: relative;
+}
+
 .col {
+    position: relative;
     margin-left: auto;
     margin-right: auto;
     padding-left: 0.25%;
     padding-right: 0.25%;
+
 }
 
 .dialog {
@@ -46,7 +62,7 @@ h2 {
     margin-left: 35%;
     margin-right: 35%;
     width: 30%;
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0,0,0,0.95);
     border-radius: 10px;
 }
 
@@ -66,9 +82,10 @@ h2 {
     display: flex;
     margin-left: auto;
     margin-right: auto;
+    max-width: 100%;
+    height: auto;
 }
 
 .dialog-content {
     margin: 2%;
 }
-
