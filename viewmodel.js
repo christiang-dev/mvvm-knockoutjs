@@ -62,7 +62,7 @@ function MoviesViewModel() {
         "2016",
         "Margot Robbie, Will Smith, Jared Leto",
         "Amanda Waller stellt für die US-Regierung ein Team zusammen, das bei hochriskanten Aufträgen ohne Rücksicht auf Verluste eingesetzt werden soll und deshalb aus gefährlichen Verbrechern besteht: der gestörten Harley Quinn, dem Profikiller Deadshot, dem pyrokinetischen Ex-Gangster El Diablo, dem Dieb Captain Boomerang, ..."),
-        new Movies("Joker", "assets/joker.jpg",
+        new Movies("Joker", "assets/joker.webp",
         "Todd Phillips",
         "2019",
         "Joaquin Phoenix, Robert De Niro, Zazie Beetz",

@@ -22,3 +22,5 @@ new Movies("Title", "picture.jpg",
 ### Note
 
 Use the right picture format for this application (the same one Netflix uses)
+For convenience we supplied 2 alternative pictures for you(pokemon, hobbit) so you can use those
+Other pictures than the provided may lead to the design not looking as intended
