@@ -1,4 +1,4 @@
-// Class to represent a row in the seat reservations grid
+// Class to represent a movie in the movie list
 
 function Movies(name, image, director, year, actors, description) {
     var self = this;
@@ -11,38 +11,12 @@ function Movies(name, image, director, year, actors, description) {
     return self;
 }
 
-// function NeueFilme(name, image) {
-//     var self = this;
-//     self.name = name;
-//     self.image = image;
-// }
-
-// function DerzeitBeliebt(name, image) {
-//     var self = this;
-//     self.name = name;
-//     self.image = image;
-// }
-
-// function NochmalAnsehen(name, image) {
-//     var self = this;
-//     self.name = name;
-//     self.image = image;
-// }
-
-
 
 // Overall viewmodel for this screen, along with initial state
 function MoviesViewModel() {
     var self = this;
     self.chosenMovieData = ko.observable();
-	self.showMoviesOverview = ko.observable();
-
-    // Non-editable catalog data - would come from the server
-    self.availableMovies = [
-        { movieName: "Deadpool"},
-        { movieName: "Lucy"},
-        { movieName: "Batman Begins"}
-    ];    
+	self.showMoviesOverview = ko.observable();  
 
     // Editable data
     self.newMovies = ko.observableArray([
@@ -55,7 +29,7 @@ function MoviesViewModel() {
          "Luc Besson", 
          "2014", 
          "Scarlett Johansson, Luc Besson, Morgan Freeman",
-         "Die US-Studentin Lucy (Scarlett Johansson) ist auf Party-Urlaub in Taipeh, wo sie von ihrem neuen Freund, dem Kleinkriminellen Richard (Pilou Asbaek), gebeten wird, einen Koffer an den mysteriösen Mr. Chang (Choi Min-sik) zu übergeben. Bei der Übergabe geht alles schief, Richard wird hingerichtet und Lucy von Mr. Chang gefangen genommen. Um dem Schlamassel zu entkommen, soll sie eine neuartige Superdroge nach Europa schmuggeln. diese wird ihr gegen ihren Willen in den Bauch implantiert. Wieder geht jedoch alles schief, Lucy wird zusammengeschlagen und dabei wird die gefährliche Substanz in ihrem Körper freigesetzt. Lucys Panik verwandelt sich allerdings schnell in Erstaunen, als sie merkt, dass die Droge ungeahnte Kräfte ausgelöst hat. Nach und nach wird sie immer stärker, denkt immer schärfer und entwickelt übermenschliche Fähigkeiten, mit denen sie ihren Peinigern entkommen kann. Während Lucy sich mit dem renommierten Hirnforscher Professor Samuel Norman (Morgan Freeman) in Verbindung setzt, um zu erfahren, was mit ihr geschieht, setzt Mafioso Jang seine Schergen auf Lucy an, die die junge Frau zum Schweigen bringen sollen..."),
+         "Die US-Studentin Lucy (Scarlett Johansson) ist auf Party-Urlaub in Taipeh, wo sie von ihrem neuen Freund, dem Kleinkriminellen Richard (Pilou Asbaek), gebeten wird, einen Koffer an den mysteriösen Mr. Chang (Choi Min-sik) zu übergeben. Bei der Übergabe geht alles schief, Richard wird hingerichtet und Lucy von Mr. Chang gefangen genommen..."),
         new Movies("Batman Begins", "assets/batman.webp",
         "Christopher Nolan",
         "2005",
@@ -63,6 +37,7 @@ function MoviesViewModel() {
         "Nachdem er Zeuge des Mordes an seinen Eltern geworden ist, reist der Industrie-Erbe Bruce Wayne geplagt von seinen Kindheitserinnerungen ziellos durch die Welt auf der Suche nach einem Weg, jene zu bekämpfen, die Schrecken und Angst verbreiten. Mit der Hilfe seines treuen Butlers Alfred, Detective Jim Gordon und seines Verbündeten Lucius Fox kehrt Wayne schließlich nach Gotham City zurück und erschafft sein Alter Ego: Batman! Als maskierter Ritter kämpft er mit all seinen Fähigkeiten - Stärke, Intelligenz und einem Arsenal von High-Tech-Waffen - gegen das Böse der Unterwelt, die die Stadt bedrohen...")
     ]);
 
+    // Editable data
     self.popularMovies = ko.observableArray([
         new Movies("Iron Man", "assets/iron_man.webp", 
         "Jon Favreau",
@@ -73,7 +48,7 @@ function MoviesViewModel() {
         "Brett Ratner",
         "1998",
         "Chris Tucker, Jackie Chan, Zhan Jingchu",
-        "Inspektor Lee fügt dem organisierten Verbrechen in Hongkong immer wieder empfindliche Niederlagen zu. Sein väterlicher Freund, Konsul Han, hilft ihm dabei nach Kräften. Als Hans Tochter Soo Yung in Los Angeles entführt wird, bittet er Lee um Hilfe.. Dieser Text wurde von www.cinehits.de entnommen."),
+        "Inspektor Lee fügt dem organisierten Verbrechen in Hongkong immer wieder empfindliche Niederlagen zu. Sein väterlicher Freund, Konsul Han, hilft ihm dabei nach Kräften. Als Hans Tochter Soo Yung in Los Angeles entführt wird, bittet er Lee um Hilfe..."),
         new Movies("The Interview", "assets/the_interview.webp",
         "Seth Rogen, Evan Goldberg",
         "2014",
@@ -81,6 +56,7 @@ function MoviesViewModel() {
         "Der Film handelt von einem Mordkomplott der CIA gegen Nordkoreas Staatsoberhaupt Kim Jong-un im Rahmen eines Interviews durch einen US-amerikanischen Showmaster.")
     ]);
 
+    // Editable data
     self.rewatchMovies = ko.observableArray([
         new Movies("Suicide Squad", "assets/suicide_squad.webp",
         "David Ayer",
